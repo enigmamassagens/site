@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma Massagens</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cabeçalho com Imagem de Fundo -->
+    <header class="header">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1 class="title">Bem-vindo(a) à Enigma Massagens</h1>
+            <button class="contact-btn" onclick="contactUs()">
+                Chame a gente para saber mais
+            </button>
+        </div>
+    </header>
+
+    <!-- Divisória -->
+    <div class="divider"></div>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <button class="professionals-btn" onclick="toggleProfessionals()">
+            Conheça nossas profissionais
+        </button>
+
+        <!-- Seção de Profissionais (inicialmente oculta) -->
+        <section class="professionals-section" id="professionalsSection">
+            <div class="professionals-grid">
+                <div class="professional-card">
+                    <div class="photo-placeholder">
+                        <img src="https://via.placeholder.com/200x250/f5f5dc/8b7355?text=Foto" alt="Profissional">
+                    </div>
+                    <h3 class="professional-name">Isabella Santos</h3>
+                </div>
+
+                <div class="professional-card">
+                    <div class="photo-placeholder">
+                        <img src="https://via.placeholder.com/200x250/f5f5dc/8b7355?text=Foto" alt="Profissional">
+                    </div>
+                    <h3 class="professional-name">Sophia Oliveira</h3>
+                </div>
+
+                <div class="professional-card">
+                    <div class="photo-placeholder">
+                        <img src="https://via.placeholder.com/200x250/f5f5dc/8b7355?text=Foto" alt="Profissional">
+                    </div>
+                    <h3 class="professional-name">Valentina Costa</h3>
+                </div>
+
+                <div class="professional-card">
+                    <div class="photo-placeholder">
+                        <img src="https://via.placeholder.com/200x250/f5f5dc/8b7355?text=Foto" alt="Profissional">
+                    </div>
+                    <h3 class="professional-name">Manuela Silva</h3>
+                </div>
+
+                <div class="professional-card">
+                    <div class="photo-placeholder">
+                        <img src="https://via.placeholder.com/200x250/f5f5dc/8b7355?text=Foto" alt="Profissional">
+                    </div>
+                    <h3 class="professional-name">Beatriz Ferreira</h3>
+                </div>
+
+                <div class="professional-card">
+                    <div class="photo-placeholder">
+                        <img src="https://via.placeholder.com/200x250/f5f5dc/8b7355?text=Foto" alt="Profissional">
+                    </div>
+                    <h3 class="professional-name">Helena Rodrigues</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divisória para Serviços -->
+        <div class="services-divider"></div>
+
+        <!-- Seção de Serviços -->
+        <section class="services-section">
+            <h2 class="services-title">Conheça nossos serviços</h2>
+            
+            <div class="services-grid">
+                <!-- Sensações Vip -->
+                <div class="service-card">
+                    <div class="service-photo-placeholder">
+                        <img src="https://via.placeholder.com/300x200/f4e4bc/8b7355?text=Foto" alt="Sensações Vip">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-name">✨ Sensações Vip</h3>
+                        <p class="service-subtitle">Técnica Exclusiva Enigma</p>
+                        <p class="service-description">Uma experiência sensorial única que mistura mistério, prazer e entrega total. A "Sensações Vip" envolve o corpo em toques envolventes que despertam o êxtase e conduzem a um estado profundo de relaxamento e prazer.</p>
+                        <div class="service-info">
+                            <div class="service-time">⏱ 30 minutos</div>
+                            <div class="service-finish">🔥 Finalização Lingam</div>
+                            <div class="service-price">💰 R$250</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sensitive -->
+                <div class="service-card">
+                    <div class="service-photo-placeholder">
+                        <img src="https://via.placeholder.com/300x200/f4e4bc/8b7355?text=Foto" alt="Sensitive">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-name">🌬 Sensitive</h3>
+                        <p class="service-description">A tradicional e envolvente massagem que ativa os pontos de prazer com suavidade e precisão. Ideal para quem busca uma imersão no toque sutil e uma conexão íntima com o próprio corpo. Um convite irresistível ao despertar dos sentidos.</p>
+                        <div class="service-info">
+                            <div class="service-time">⏱ 1 hora</div>
+                            <div class="service-finish">🔥 Finalização Lingam</div>
+                            <div class="service-price">💰 R$300</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Naturista -->
+                <div class="service-card">
+                    <div class="service-photo-placeholder">
+                        <img src="https://via.placeholder.com/300x200/f4e4bc/8b7355?text=Foto" alt="Naturista">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-name">🪔 Naturista</h3>
+                        <p class="service-description">Na Massagem Naturista, o corpo é tratado com suavidade e conexão, utilizando toques deslizantes com óleo ou creme, proporcionando um relaxamento profundo e envolvente. A prática corpo a corpo intensifica a experiência, criando uma atmosfera de intimidade e fluidez entre movimento e prazer, em total harmonia.</p>
+                        <div class="service-info">
+                            <div class="service-time">⏱ 1 hora</div>
+                            <div class="service-finish">🔥 Finalização Lingam</div>
+                            <div class="service-price">💰 R$350</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Afrodite -->
+                <div class="service-card">
+                    <div class="service-photo-placeholder">
+                        <img src="https://via.placeholder.com/300x200/f4e4bc/8b7355?text=Foto" alt="Afrodite">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-name">🪷 Afrodite</h3>
+                        <p class="service-subtitle">Técnica Exclusiva Enigma</p>
+                        <p class="service-description">Inspirada na deusa do amor, essa massagem mergulha você em uma atmosfera de romance e sedução. Toques leves e ritmados despertam a bioenergia do corpo, criando uma experiência sensual e delicadamente intensa.</p>
+                        <div class="service-info">
+                            <div class="service-time">⏱ 1 hora</div>
+                            <div class="service-finish">🔥 Finalização Lingam</div>
+                            <div class="service-price">💰 R$350</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enigma -->
+                <div class="service-card">
+                    <div class="service-photo-placeholder">
+                        <img src="https://via.placeholder.com/300x200/f4e4bc/8b7355?text=Foto" alt="Enigma">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-name">💋 Enigma</h3>
+                        <p class="service-subtitle">Técnica Exclusiva Enigma</p>
+                        <p class="service-description">A sensualidade em sua forma mais refinada. Com toques provocantes e hipnotizantes, a massagem Enigma desperta desejos profundos e conduz você por uma jornada única de prazer e mistério.</p>
+                        <div class="service-info">
+                            <div class="service-time">⏱ 1 hora</div>
+                            <div class="service-finish">🔥 Finalização Lingam</div>
+                            <div class="service-price">💰 R$400</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enigma Vip -->
+                <div class="service-card">
+                    <div class="service-photo-placeholder">
+                        <img src="https://via.placeholder.com/300x200/f4e4bc/8b7355?text=Foto" alt="Enigma Vip">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-name">❤‍🔥 Enigma Vip</h3>
+                        <p class="service-subtitle">Técnica Exclusiva Enigma</p>
+                        <p class="service-description">Uma experiência premium, intensa e inesquecível. A Enigma Vip é um espetáculo sensual, cuidadosamente desenhado para elevar sua energia e prazer ao máximo. Ideal para quem deseja se entregar ao luxo do toque e da conexão.</p>
+                        <div class="service-info">
+                            <div class="service-time">⏱ 1 hora</div>
+                            <div class="service-finish">🔥 Finalização Lingam</div>
+                            <div class="service-price">💰 R$450</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vivência -->
+                <div class="service-card">
+                    <div class="service-photo-placeholder">
+                        <img src="https://via.placeholder.com/300x200/f4e4bc/8b7355?text=Foto" alt="Vivência">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-name">🌌 Vivência</h3>
+                        <p class="service-subtitle">Técnica Exclusiva Enigma</p>
+                        <p class="service-description">Uma explosão de sensações, prazer e intensidade. Vivência é uma massagem criada para quem deseja se perder e se encontrar em múltiplos toques e estilos. Com três terapeutas, você será conduzido(a) por uma sequência envolvente de estímulos, entrega e conexão total.</p>
+                        <p class="service-highlight">💥 Uma jornada de prazer que vai além do físico. Um convite à entrega, ao desejo… e à descoberta de si.</p>
+                        <div class="service-info">
+                            <div class="service-time">⏱ 1h e 30 min (30 min com cada terapeuta)</div>
+                            <div class="service-finish">🔥 Finalização Lingam</div>
+                            <div class="service-price">💰 R$600</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Massagem Lingam -->
+                <div class="service-card">
+                    <div class="service-photo-placeholder">
+                        <img src="https://via.placeholder.com/300x200/f4e4bc/8b7355?text=Foto" alt="Massagem Lingam">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-name">🖐🏼 Massagem Lingam</h3>
+                        <p class="service-description">Estímulo manual com manobras rotativas, projetadas para intensificar o prazer e proporcionar múltiplos orgasmos. Uma experiência de entrega, controle e libertação.</p>
+                        <div class="service-info">
+                            <div class="service-time">⏱ 10 minutos</div>
+                            <div class="service-price">💰 R$100</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
