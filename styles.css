@@ -1,0 +1,200 @@
+/* Reset e configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fefefe 0%, #f5f5dc 100%);
+    min-height: 100vh;
+    color: #5d4e37;
+}
+
+/* Cabeçalho Dourado Angelical */
+.header {
+    background: linear-gradient(135deg, #f4e4bc 0%, #e6d3a3 50%, #d4c490 100%);
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(212, 196, 144, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Divisória */
+.divider {
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, #d4c490 50%, transparent 100%);
+    margin: 0;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Botão das Profissionais */
+.professionals-btn {
+    background: linear-gradient(135deg, #e6d3a3 0%, #d4c490 100%);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(212, 196, 144, 0.3);
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.professionals-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(212, 196, 144, 0.4);
+    background: linear-gradient(135deg, #d4c490 0%, #c4b480 100%);
+}
+
+.professionals-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Seção de Profissionais */
+.professionals-section {
+    margin-top: 50px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+    display: none;
+}
+
+.professionals-section.show {
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
+}
+
+/* Grid de Profissionais */
+.professionals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+/* Cartão de Profissional */
+.professional-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(212, 196, 144, 0.2);
+}
+
+.professional-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    border-color: rgba(212, 196, 144, 0.4);
+}
+
+/* Placeholder da Foto */
+.photo-placeholder {
+    width: 200px;
+    height: 250px;
+    margin: 0 auto 25px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #f5f5dc 0%, #ede3c8 100%);
+}
+
+.photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Nome da Profissional */
+.professional-name {
+    font-size: 1.4rem;
+    color: #5d4e37;
+    font-weight: 500;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
+    
+    .header {
+        padding: 40px 15px;
+    }
+    
+    .main-content {
+        padding: 40px 15px;
+    }
+    
+    .professionals-btn {
+        padding: 15px 30px;
+        font-size: 1rem;
+    }
+    
+    .professionals-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        padding: 0 10px;
+    }
+    
+    .photo-placeholder {
+        width: 180px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+    
+    .professionals-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .professional-card {
+        padding: 25px 15px;
+    }
+}
