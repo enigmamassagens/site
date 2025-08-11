@@ -1,0 +1,603 @@
+/* Reset e configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    min-height: 100vh;
+    color: #FFD700;
+}
+
+/* Cabeçalho com Imagem de Fundo */
+.header {
+    background-image: url('imagemenigma.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Overlay para melhorar legibilidade do texto */
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* Conteúdo do cabeçalho */
+.header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 3.8rem;
+    font-weight: 400;
+    color: white;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+/* Botão Verde de Contato */
+.contact-btn {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    border: none;
+    padding: 20px 45px;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.contact-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(40, 167, 69, 0.6);
+    background: linear-gradient(135deg, #218838 0%, #1abc9c 100%);
+    scale: 1.05;
+}
+
+.contact-btn:active {
+    transform: translateY(-2px);
+    scale: 1.02;
+}
+
+/* Divisória */
+.divider {
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, #FFD700 50%, transparent 100%);
+    margin: 0;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Botão das Profissionais */
+.professionals-btn {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: #1a1a1a;
+    border: none;
+    padding: 18px 40px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.professionals-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+    background: linear-gradient(135deg, #FFA500 0%, #FF8C00 100%);
+}
+
+.professionals-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Seção de Profissionais */
+.professionals-section {
+    margin-top: 50px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+    display: none;
+}
+
+.professionals-section.show {
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
+}
+
+/* Grid de Profissionais */
+.professionals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+/* Cartão de Profissional */
+.professional-card {
+    background: #1a1a1a;
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.professional-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.12);
+    border-color: rgba(255, 215, 0, 0.4);
+}
+
+/* Placeholder da Foto */
+.photo-placeholder {
+    width: 200px;
+    height: 250px;
+    margin: 0 auto 25px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.1);
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+}
+
+.photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Nome da Profissional */
+.professional-name {
+    font-size: 1.4rem;
+    color: #FFD700;
+    font-weight: 500;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.8rem;
+        letter-spacing: 1px;
+        margin-bottom: 25px;
+    }
+    
+    .header {
+        padding: 60px 15px;
+        min-height: 400px;
+    }
+    
+    .contact-btn {
+        padding: 18px 35px;
+        font-size: 1.1rem;
+    }
+    
+    .main-content {
+        padding: 40px 15px;
+    }
+    
+    .professionals-btn {
+        padding: 15px 30px;
+        font-size: 1rem;
+    }
+    
+    .professionals-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        padding: 0 10px;
+    }
+    
+    .photo-placeholder {
+        width: 180px;
+        height: 220px;
+    }
+
+    .services-title {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .service-content {
+        padding: 20px;
+    }
+
+    .service-name {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2.2rem;
+    }
+    
+    .header {
+        min-height: 350px;
+        padding: 40px 10px;
+    }
+    
+    .contact-btn {
+        padding: 15px 25px;
+        font-size: 1rem;
+    }
+    
+    .professionals-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .professional-card {
+        padding: 25px 15px;
+    }
+
+    .services-title {
+        font-size: 1.8rem;
+    }
+
+    .service-photo-placeholder {
+        height: 180px;
+    }
+
+    .service-content {
+        padding: 18px;
+    }
+
+    .service-name {
+        font-size: 1.2rem;
+    }
+
+    .service-description {
+        font-size: 0.9rem;
+    }
+}
+
+/* Divisória dos Serviços */
+.services-divider {
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, #FFD700 50%, transparent 100%);
+    margin: 80px 0 60px 0;
+}
+
+/* Seção de Serviços */
+.services-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Título dos Serviços */
+.services-title {
+    font-size: 2.8rem;
+    color: #FFD700;
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* Grid dos Serviços */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+/* Cartão de Serviço */
+.service-card {
+    background: #1a1a1a;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.12);
+    border-color: rgba(255, 215, 0, 0.4);
+}
+
+/* Placeholder da Foto do Serviço */
+.service-photo-placeholder {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Conteúdo do Serviço */
+.service-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nome do Serviço */
+.service-name {
+    font-size: 1.5rem;
+    color: #FFD700;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+/* Subtítulo do Serviço */
+.service-subtitle {
+    font-size: 0.9rem;
+    color: #FFA500;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+/* Descrição do Serviço */
+.service-description {
+    font-size: 0.95rem;
+    color: #E0E0E0;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+    flex-grow: 1;
+}
+
+/* Destaque especial para Vivência */
+.service-highlight {
+    font-size: 0.9rem;
+    color: #FFD700;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: rgba(255, 215, 0, 0.2);
+    border-radius: 10px;
+}
+
+/* Informações do Serviço */
+.service-info {
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.service-time,
+.service-finish,
+.service-price {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.service-time {
+    color: #FFA500;
+}
+
+.service-finish {
+    color: #FFD700;
+}
+
+.service-price {
+    color: #FFD700;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Responsividade - Serviços */
+@media (max-width: 768px) {
+    .services-title {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .service-content {
+        padding: 20px;
+    }
+
+    .service-name {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-title {
+        font-size: 1.8rem;
+    }
+
+    .service-photo-placeholder {
+        height: 180px;
+    }
+
+    .service-content {
+        padding: 18px;
+    }
+
+    .service-name {
+        font-size: 1.2rem;
+    }
+
+    .service-description {
+        font-size: 0.9rem;
+    }
+}
+
+/* Divisória do Instagram */
+.instagram-divider {
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, #FFD700 50%, transparent 100%);
+    margin: 80px 0 60px 0;
+}
+
+/* Seção do Instagram */
+.instagram-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+    text-align: center;
+}
+
+/* Conteúdo do Instagram */
+.instagram-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Ícone do Instagram */
+.instagram-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.instagram-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Botão do Instagram */
+.instagram-btn {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: #1a1a1a;
+    border: none;
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.instagram-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+    background: linear-gradient(135deg, #FFA500 0%, #FF8C00 100%);
+}
+
+.instagram-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Rodapé */
+.footer {
+    background: #0f0f0f;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.footer-content {
+    color: #FFD700;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+/* Responsividade - Instagram e Rodapé */
+@media (max-width: 768px) {
+    .instagram-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .instagram-btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+    
+    .footer-content {
+        font-size: 0.8rem;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .instagram-section {
+        padding: 30px 15px 60px;
+    }
+    
+    .instagram-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .footer-content {
+        font-size: 0.75rem;
+    }
+}
