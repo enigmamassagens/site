@@ -1,0 +1,984 @@
+/* Reset e configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Garantir que o widget do Tawk.to nunca seja oculto por estilos locais */
+[class*="tawk-"],
+#tawkchat-container,
+iframe[src*="tawk.to"],
+div[id^="tawk"] {
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+}
+
+/* Evitar que elementos com z-index alto cubram o chat */
+#tawkchat-container,
+.tawk-min-container,
+iframe[src*="tawk.to"] {
+    z-index: 2147483000 !important; /* abaixo do máximo do navegador */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #ffffff;
+    min-height: 100vh;
+    color: #4a2c82;
+}
+
+/* Cabeçalho com Logo */
+.logo-header {
+    height: 7cm;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #B388EB;
+    box-shadow: 0 2px 10px rgba(155, 89, 182, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(155, 89, 182, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(155, 89, 182, 0.3);
+}
+
+/* Cabeçalho com Imagem de Fundo */
+.header {
+    background-image: url('Retrato buda vermelho.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Overlay para melhorar legibilidade do texto */
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
+/* Conteúdo do cabeçalho */
+.header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 3.8rem;
+    font-weight: 400;
+    color: white;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+/* Botão Verde de Contato */
+.contact-btn {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    border: none;
+    padding: 20px 45px;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.contact-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(37, 211, 102, 0.55);
+    background: linear-gradient(135deg, #20BD5A 0%, #0E6F61 100%);
+    scale: 1.05;
+}
+
+.contact-btn:active {
+    transform: translateY(-2px);
+    scale: 1.02;
+}
+
+/* Divisória */
+.divider {
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, #B388EB 50%, transparent 100%);
+    margin: 0;
+}
+
+/* Divisória para Conteúdo Principal */
+.main-divider {
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, #B388EB 50%, transparent 100%);
+    margin: 0;
+}
+
+/* Seção Sobre Nós */
+.about-section {
+    padding: 80px 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.about-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.about-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.about-content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-title {
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: white;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.about-text {
+    margin-bottom: 30px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.address-btn {
+    background: linear-gradient(135deg, #B388EB 0%, #9B59B6 100%);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(155, 89, 182, 0.35);
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.address-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(155, 89, 182, 0.45);
+    background: linear-gradient(135deg, #A66FE3 0%, #8E44AD 100%);
+}
+
+.address-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Carrossel de Imagens */
+.carousel-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Botão das Profissionais */
+.professionals-btn {
+    background: linear-gradient(135deg, #B388EB 0%, #9B59B6 100%);
+    color: #ffffff;
+    border: none;
+    padding: 18px 40px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(155, 89, 182, 0.35);
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.professionals-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(155, 89, 182, 0.45);
+    background: linear-gradient(135deg, #A66FE3 0%, #8E44AD 100%);
+}
+
+.professionals-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Seção de Profissionais */
+.professionals-section {
+    margin-top: 50px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+    display: none;
+}
+
+.professionals-section.show {
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
+}
+
+/* Grid de Profissionais */
+.professionals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+/* Cartão de Profissional */
+.professional-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(155, 89, 182, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(155, 89, 182, 0.2);
+}
+
+.professional-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(155, 89, 182, 0.15);
+    border-color: rgba(155, 89, 182, 0.4);
+}
+
+/* Placeholder da Foto */
+.photo-placeholder {
+    width: 200px;
+    height: 250px;
+    margin: 0 auto 25px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(155, 89, 182, 0.12);
+    background: linear-gradient(135deg, #B388EB 0%, #9B59B6 100%);
+}
+
+.photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Nome da Profissional */
+.professional-name {
+    font-size: 1.4rem;
+    color: #8E44AD;
+    font-weight: 500;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.8rem;
+        letter-spacing: 1px;
+        margin-bottom: 25px;
+    }
+    
+    .header {
+        padding: 60px 15px;
+        min-height: 400px;
+    }
+    
+    .contact-btn {
+        padding: 18px 35px;
+        font-size: 1.1rem;
+    }
+    
+    .main-content {
+        padding: 40px 15px;
+    }
+    
+    .professionals-btn {
+        padding: 15px 30px;
+        font-size: 1rem;
+    }
+    
+    .professionals-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        padding: 0 10px;
+    }
+    
+    .photo-placeholder {
+        width: 180px;
+        height: 220px;
+    }
+
+    .services-title {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .service-content {
+        padding: 20px;
+    }
+
+    .service-name {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2.2rem;
+    }
+    
+    .header {
+        min-height: 350px;
+        padding: 40px 10px;
+    }
+    
+    .contact-btn {
+        padding: 15px 25px;
+        font-size: 1rem;
+    }
+    
+    .professionals-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .professional-card {
+        padding: 25px 15px;
+    }
+
+    .services-title {
+        font-size: 1.8rem;
+    }
+
+    .service-photo-placeholder {
+        height: 180px;
+    }
+
+    .service-content {
+        padding: 18px;
+    }
+
+    .service-name {
+        font-size: 1.2rem;
+    }
+
+    .service-description {
+        font-size: 0.9rem;
+    }
+}
+
+/* Divisória dos Serviços */
+.services-divider {
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, #B388EB 50%, transparent 100%);
+    margin: 80px 0 60px 0;
+}
+
+/* Seção de Serviços */
+.services-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Título dos Serviços */
+.services-title {
+    font-size: 2.8rem;
+    color: #6C3483;
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* Grid dos Serviços */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+/* Cartão de Serviço */
+.service-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(155, 89, 182, 0.25);
+    box-shadow: 0 10px 30px rgba(155, 89, 182, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 2cm;
+}
+
+/* Faixa roxa no topo do card de serviços */
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2cm;
+    background: linear-gradient(135deg, #B388EB 0%, #9B59B6 100%);
+    z-index: 0;
+}
+
+/* Garantir que o conteúdo fique acima da faixa */
+.service-content {
+    position: relative;
+    z-index: 1;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(155, 89, 182, 0.15);
+    border-color: rgba(155, 89, 182, 0.4);
+}
+
+/* Placeholder da Foto do Serviço */
+.service-photo-placeholder {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #B388EB 0%, #9B59B6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Conteúdo do Serviço */
+.service-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nome do Serviço */
+.service-name {
+    font-size: 1.5rem;
+    color: #6C3483;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+/* Subtítulo do Serviço */
+.service-subtitle {
+    font-size: 0.9rem;
+    color: #8E44AD;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+/* Descrição do Serviço */
+.service-description {
+    font-size: 0.95rem;
+    color: #4b4b4b;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+    flex-grow: 1;
+}
+
+/* Destaque especial para Vivência */
+.service-highlight {
+    font-size: 0.9rem;
+    color: #6C3483;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: rgba(155, 89, 182, 0.15);
+    border-radius: 10px;
+}
+
+/* Informações do Serviço */
+.service-info {
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid rgba(155, 89, 182, 0.2);
+}
+
+.service-time,
+.service-finish,
+.service-price {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.service-time { color: #8E44AD; }
+.service-finish { color: #6C3483; }
+.service-price { color: #6C3483; font-size: 1.1rem; font-weight: 600; margin-top: 10px; }
+
+/* Responsividade - Serviços */
+@media (max-width: 768px) {
+    .services-title {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .service-content {
+        padding: 20px;
+    }
+
+    .service-name {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-title {
+        font-size: 1.8rem;
+    }
+
+    .service-photo-placeholder {
+        height: 180px;
+    }
+
+    .service-content {
+        padding: 18px;
+    }
+
+    .service-name {
+        font-size: 1.2rem;
+    }
+
+    .service-description {
+        font-size: 0.9rem;
+    }
+}
+
+/* Divisória da Terapeuta */
+.therapist-divider {
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, #B388EB 50%, transparent 100%);
+    margin: 80px 0 60px 0;
+}
+
+/* Seção da Terapeuta */
+.therapist-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.therapist-title {
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: #4a2c82;
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(155, 89, 182, 0.1);
+}
+
+.therapist-card {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 30px rgba(155, 89, 182, 0.15);
+    border: 1px solid rgba(155, 89, 182, 0.1);
+}
+
+.therapist-photo {
+    flex-shrink: 0;
+}
+
+.therapist-photo img {
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 6px 20px rgba(155, 89, 182, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.therapist-photo img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(155, 89, 182, 0.3);
+}
+
+.therapist-content {
+    flex: 1;
+}
+
+.therapist-name {
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #4a2c82;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.therapist-description p {
+    font-size: 1.1rem;
+    color: #4a2c82;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.therapist-quote {
+    background: linear-gradient(135deg, #f8f4ff 0%, #f0e6ff 100%);
+    border-left: 4px solid #B388EB;
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 0 15px 15px 0;
+    font-size: 1.2rem;
+    color: #4a2c82;
+    font-style: italic;
+    font-weight: 500;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(155, 89, 182, 0.1);
+}
+
+/* Divisória do Instagram */
+.instagram-divider {
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, #B388EB 50%, transparent 100%);
+    margin: 80px 0 60px 0;
+}
+
+/* Seção do Instagram */
+.instagram-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+    text-align: center;
+}
+
+/* Conteúdo do Instagram */
+.instagram-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Ícone do Instagram */
+.instagram-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.instagram-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Botão do Instagram */
+.instagram-btn {
+    background: linear-gradient(135deg, #B388EB 0%, #9B59B6 100%);
+    color: #ffffff;
+    border: none;
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(155, 89, 182, 0.35);
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.instagram-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(155, 89, 182, 0.45);
+    background: linear-gradient(135deg, #A66FE3 0%, #8E44AD 100%);
+}
+
+.instagram-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Rodapé */
+.footer {
+    background: #f5f2fa;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.footer-content {
+    color: #6C3483;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+/* Responsividade - Terapeuta */
+@media (max-width: 768px) {
+    .therapist-card {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px;
+    }
+    
+    .therapist-photo img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .therapist-title {
+        font-size: 2.4rem;
+    }
+    
+    .therapist-name {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .therapist-section {
+        padding: 40px 15px;
+    }
+    
+    .therapist-card {
+        padding: 25px;
+    }
+    
+    .therapist-photo img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .therapist-title {
+        font-size: 2rem;
+    }
+    
+    .therapist-name {
+        font-size: 1.8rem;
+    }
+    
+    .therapist-description p {
+        font-size: 1rem;
+    }
+    
+    .therapist-quote {
+        font-size: 1.1rem;
+        padding: 20px;
+    }
+}
+
+/* Divisória do Telegram */
+.telegram-divider {
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, #0088cc 50%, transparent 100%);
+    margin: 80px 0 60px 0;
+}
+
+/* Seção do Telegram */
+.telegram-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+    text-align: center;
+}
+
+/* Conteúdo do Telegram */
+.telegram-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Ícone do Telegram */
+.telegram-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.telegram-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Botão do Telegram */
+.telegram-btn {
+    background: linear-gradient(135deg, #0088cc 0%, #0077b3 100%);
+    color: #ffffff;
+    border: none;
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 136, 204, 0.35);
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.telegram-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 136, 204, 0.45);
+    background: linear-gradient(135deg, #0099dd 0%, #0088cc 100%);
+}
+
+.telegram-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Responsividade - Instagram e Rodapé */
+@media (max-width: 768px) {
+    .instagram-content,
+    .telegram-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .instagram-btn,
+    .telegram-btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+    
+    .footer-content {
+        font-size: 0.8rem;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .instagram-section,
+    .telegram-section {
+        padding: 30px 15px 60px;
+    }
+    
+    .instagram-btn,
+    .telegram-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .footer-content {
+        font-size: 0.75rem;
+    }
+}

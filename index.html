@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma Massagens</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cabeçalho com Logo -->
+    <header class="logo-header">
+        <div class="logo-container">
+            <img src="logomarca nova.jpeg" alt="Enigma Massagens" class="logo-image">
+        </div>
+    </header>
+
+    <!-- Cabeçalho com Imagem de Fundo -->
+    <header class="header">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1 class="title">Bem-vindo(a) à Enigma Massagens</h1>
+            <button class="contact-btn" onclick="contactUs()">
+                Entre em contato com a gente para mais informações
+            </button>
+        </div>
+    </header>
+
+    <!-- Divisória -->
+    <div class="divider"></div>
+
+    <!-- Seção Sobre Nós -->
+    <section class="about-section">
+        <div class="about-background">
+            <img src="Entrada.jpeg" alt="Entrada Enigma Massagens" class="about-bg-image">
+        </div>
+        <div class="about-overlay"></div>
+        <div class="about-content">
+            <h2 class="about-title">SOBRE NÓS</h2>
+            <div class="about-text">
+                <p>Descubra a Enigma Massagens: onde o toque vai além do relaxamento.</p>
+                <p>Somos a única clínica especializada que desenvolveu técnicas exclusivas, criadas para proporcionar uma experiência única, intensa e memorável.</p>
+                <p>Cada detalhe foi pensado para despertar seus sentidos e liberar tudo o que há de melhor em você.</p>
+                <p>Aqui, você não encontra apenas uma massagem — você vive um ritual de prazer, entrega e reconexão.</p>
+                <p>Permita-se sentir o que só a Enigma pode oferecer.</p>
+            </div>
+            <button class="address-btn" onclick="openAddress()">
+                Clique aqui para visualizar nosso endereço
+            </button>
+        </div>
+
+    </section>
+
+    <!-- Divisória para Conteúdo Principal -->
+    <div class="main-divider"></div>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <button id="therapistsWhatsappBtn" class="professionals-btn">
+            Conhecer nossas terapeutas (WhatsApp)
+        </button>
+
+        <!-- Seção de Profissionais (inicialmente oculta) -->
+        <section class="professionals-section" id="professionalsSection">
+            <div class="professionals-grid">
+                <div class="professional-card">
+                    <div class="photo-placeholder">
+                        <img src="https://via.placeholder.com/200x250/f5f5dc/8b7355?text=Foto" alt="Profissional">
+                    </div>
+                    <h3 class="professional-name">Isabella Santos</h3>
+                </div>
+
+                <div class="professional-card">
+                    <div class="photo-placeholder">
+                        <img src="https://via.placeholder.com/200x250/f5f5dc/8b7355?text=Foto" alt="Profissional">
+                    </div>
+                    <h3 class="professional-name">Sophia Oliveira</h3>
+                </div>
+
+                <div class="professional-card">
+                    <div class="photo-placeholder">
+                        <img src="https://via.placeholder.com/200x250/f5f5dc/8b7355?text=Foto" alt="Profissional">
+                    </div>
+                    <h3 class="professional-name">Valentina Costa</h3>
+                </div>
+
+                <div class="professional-card">
+                    <div class="photo-placeholder">
+                        <img src="https://via.placeholder.com/200x250/f5f5dc/8b7355?text=Foto" alt="Profissional">
+                    </div>
+                    <h3 class="professional-name">Manuela Silva</h3>
+                </div>
+
+                <div class="professional-card">
+                    <div class="photo-placeholder">
+                        <img src="https://via.placeholder.com/200x250/f5f5dc/8b7355?text=Foto" alt="Profissional">
+                    </div>
+                    <h3 class="professional-name">Beatriz Ferreira</h3>
+                </div>
+
+                <div class="professional-card">
+                    <div class="photo-placeholder">
+                        <img src="https://via.placeholder.com/200x250/f5f5dc/8b7355?text=Foto" alt="Profissional">
+                    </div>
+                    <h3 class="professional-name">Helena Rodrigues</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divisória para Serviços -->
+        <div class="services-divider"></div>
+
+        <!-- Seção de Serviços -->
+        <section class="services-section">
+            <h2 class="services-title">Conheça nossos serviços</h2>
+            
+            <div class="services-grid">
+                <!-- Sensações Vip -->
+                <div class="service-card">
+                    <div class="service-content">
+                        <h3 class="service-name">✨ Sensações Vip</h3>
+                        <p class="service-subtitle">Técnica Exclusiva Enigma</p>
+                        <p class="service-description">Uma experiência sensorial única que mistura mistério, prazer e entrega total. A "Sensações Vip" envolve o corpo em toques envolventes que despertam o êxtase e conduzem a um estado profundo de relaxamento e prazer.</p>
+                        <div class="service-info">
+                            <div class="service-time">⏱ 30 minutos</div>
+                            <div class="service-finish">🔥 Finalização Lingam</div>
+                            <div class="service-price">💰 R$250</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sensitive -->
+                <div class="service-card">
+                    <div class="service-content">
+                        <h3 class="service-name">🌬 Sensitive</h3>
+                        <p class="service-description">A tradicional e envolvente massagem que ativa os pontos de prazer com suavidade e precisão. Ideal para quem busca uma imersão no toque sutil e uma conexão íntima com o próprio corpo. Um convite irresistível ao despertar dos sentidos.</p>
+                        <div class="service-info">
+                            <div class="service-time">⏱ 1 hora</div>
+                            <div class="service-finish">🔥 Finalização Lingam</div>
+                            <div class="service-price">💰 R$300</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Naturista -->
+                <div class="service-card">
+                    <div class="service-content">
+                        <h3 class="service-name">🪔 Naturista</h3>
+                        <p class="service-description">Na Massagem Naturista, o corpo é tratado com suavidade e conexão, utilizando toques deslizantes com óleo ou creme, proporcionando um relaxamento profundo e envolvente. A prática corpo a corpo intensifica a experiência, criando uma atmosfera de intimidade e fluidez entre movimento e prazer, em total harmonia.</p>
+                        <div class="service-info">
+                            <div class="service-time">⏱ 1 hora</div>
+                            <div class="service-finish">🔥 Finalização Lingam</div>
+                            <div class="service-price">💰 R$350</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Afrodite -->
+                <div class="service-card">
+                    <div class="service-content">
+                        <h3 class="service-name">🪷 Afrodite</h3>
+                        <p class="service-subtitle">Técnica Exclusiva Enigma</p>
+                        <p class="service-description">Inspirada na deusa do amor, essa massagem mergulha você em uma atmosfera de romance e sedução. Toques leves e ritmados despertam a bioenergia do corpo, criando uma experiência sensual e delicadamente intensa.</p>
+                        <div class="service-info">
+                            <div class="service-time">⏱ 1 hora</div>
+                            <div class="service-finish">🔥 Finalização Lingam</div>
+                            <div class="service-price">💰 R$350</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enigma -->
+                <div class="service-card">
+                    <div class="service-content">
+                        <h3 class="service-name">💋 Enigma</h3>
+                        <p class="service-subtitle">Técnica Exclusiva Enigma</p>
+                        <p class="service-description">A sensualidade em sua forma mais refinada. Com toques provocantes e hipnotizantes, a massagem Enigma desperta desejos profundos e conduz você por uma jornada única de prazer e mistério.</p>
+                        <div class="service-info">
+                            <div class="service-time">⏱ 1 hora</div>
+                            <div class="service-finish">🔥 Finalização Lingam</div>
+                            <div class="service-price">💰 R$400</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enigma Vip -->
+                <div class="service-card">
+                    <div class="service-content">
+                        <h3 class="service-name">❤‍🔥 Enigma Vip</h3>
+                        <p class="service-subtitle">Técnica Exclusiva Enigma</p>
+                        <p class="service-description">Uma experiência premium, intensa e inesquecível. A Enigma Vip é um espetáculo sensual, cuidadosamente desenhado para elevar sua energia e prazer ao máximo. Ideal para quem deseja se entregar ao luxo do toque e da conexão.</p>
+                        <div class="service-info">
+                            <div class="service-time">⏱ 1 hora</div>
+                            <div class="service-finish">🔥 Finalização Lingam</div>
+                            <div class="service-price">💰 R$450</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vivência -->
+                <div class="service-card">
+                    <div class="service-content">
+                        <h3 class="service-name">🌌 Vivência</h3>
+                        <p class="service-subtitle">Técnica Exclusiva Enigma</p>
+                        <p class="service-description">Uma explosão de sensações, prazer e intensidade. Vivência é uma massagem criada para quem deseja se perder e se encontrar em múltiplos toques e estilos. Com três terapeutas, você será conduzido(a) por uma sequência envolvente de estímulos, entrega e conexão total.</p>
+                        <p class="service-highlight">💥 Uma jornada de prazer que vai além do físico. Um convite à entrega, ao desejo… e à descoberta de si.</p>
+                        <div class="service-info">
+                            <div class="service-time">⏱ 1h e 30 min (30 min com cada terapeuta)</div>
+                            <div class="service-finish">🔥 Finalização Lingam</div>
+                            <div class="service-price">💰 R$600</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Massagem Lingam -->
+                <div class="service-card">
+                    <div class="service-content">
+                        <h3 class="service-name">🖐🏼 Massagem Lingam</h3>
+                        <p class="service-description">Estímulo manual com manobras rotativas, projetadas para intensificar o prazer e proporcionar múltiplos orgasmos. Uma experiência de entrega, controle e libertação.</p>
+                        <div class="service-info">
+                            <div class="service-time">⏱ 10 minutos</div>
+                            <div class="service-price">💰 R$100</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divisória para Terapeuta -->
+        <div class="therapist-divider"></div>
+
+        <!-- Seção da Terapeuta -->
+        <section class="therapist-section">
+            <h2 class="therapist-title">Conheça uma de nossas Terapeutas</h2>
+            
+            <div class="therapist-card">
+                <div class="therapist-photo">
+                    <img src="Glaucia.jpeg" alt="Glaucia Grilo">
+                </div>
+                <div class="therapist-content">
+                    <h3 class="therapist-name">Sobre Glaucia Grilo</h3>
+                    <div class="therapist-description">
+                        <p>Fundadora e criadora das técnicas exclusivas Afrodite, Enigma VIP e Sensações, Glaucia Grilo é terapeuta tântrica e holística desde 2020. Com uma trajetória marcada por dedicação, estudo e paixão pela arte do toque consciente, transformou sua vocação em um verdadeiro templo de prazer, bem-estar e autoconhecimento: a Enigma Massagens.</p>
+                        
+                        <p>Sua missão é oferecer experiências únicas, que vão além da massagem tradicional. Glaucia acredita que o corpo é um templo sagrado e que cada atendimento é uma oportunidade de despertar sensações, desbloquear energias e reconectar corpo, mente e espírito.</p>
+                        
+                        <p>Ao longo dos anos, desenvolveu métodos exclusivos que unem técnica, sensibilidade e espiritualidade, proporcionando aos clientes momentos intensos de relaxamento e descoberta interior. Seu trabalho é reconhecido pela excelência, atenção aos detalhes e pela capacidade de criar uma atmosfera de confiança e entrega.</p>
+                        
+                        <p>Hoje, à frente da Enigma Massagens, Glaucia Grilo segue expandindo seu conhecimento, formando novos terapeutas e levando a magia do toque consciente para quem busca mais prazer, autoconhecimento e qualidade de vida.</p>
+                        
+                        <div class="therapist-quote">
+                            ✨ "Meu propósito é despertar o melhor que existe dentro de cada pessoa, através de um toque que transforma." – Glaucia Grilo
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divisória para Instagram -->
+        <div class="instagram-divider"></div>
+
+        <!-- Seção do Instagram -->
+        <section class="instagram-section">
+            <div class="instagram-content">
+                <div class="instagram-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="#B388EB">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </div>
+                <button class="instagram-btn" onclick="openInstagram()">
+                    Conheça nosso Instagram
+                </button>
+            </div>
+        </section>
+
+        <!-- Divisória para Telegram -->
+        <div class="telegram-divider"></div>
+
+        <!-- Seção do Telegram -->
+        <section class="telegram-section">
+            <div class="telegram-content">
+                <div class="telegram-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="#0088cc">
+                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                    </svg>
+                </div>
+                <button class="telegram-btn" onclick="openTelegram()">
+                    Fale conosco no Telegram
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-content">
+            Site desenvolvido por Guilherme Squarça - Cientista de Dados
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/6899f9dcd866aa19294cd7b3/1j2cng27u';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+</html>
