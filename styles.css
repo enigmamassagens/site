@@ -62,7 +62,7 @@ body {
 
 /* Cabeçalho com Imagem de Fundo */
 .header {
-    background-image: url('imagemenigma.webp');
+    background-image: url('Retrato buda vermelho.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -498,11 +498,31 @@ body {
     background: #ffffff;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(155, 89, 182, 0.08);
-    transition: all 0.3s ease;
-    border: 1px solid rgba(155, 89, 182, 0.2);
+    border: 1px solid rgba(155, 89, 182, 0.25);
+    box-shadow: 0 10px 30px rgba(155, 89, 182, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     display: flex;
     flex-direction: column;
+    position: relative;
+    padding-top: 2cm;
+}
+
+/* Faixa roxa no topo do card de serviços */
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2cm;
+    background: linear-gradient(135deg, #B388EB 0%, #9B59B6 100%);
+    z-index: 0;
+}
+
+/* Garantir que o conteúdo fique acima da faixa */
+.service-content {
+    position: relative;
+    z-index: 1;
 }
 
 .service-card:hover {
