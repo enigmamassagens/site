@@ -21,7 +21,7 @@ function toggleProfessionals() {
 // Função para o botão de contato
 function contactUs() {
     // Configuração do WhatsApp com o número e mensagem especificados
-    const phoneNumber = "5511996994914"; // Número fornecido
+    const phoneNumber = "5511911829860"; // Número fornecido
     const message = "Gostaria de mais informações por favor";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     
@@ -31,7 +31,7 @@ function contactUs() {
 
 // Botão para WhatsApp focado nas terapeutas
 function contactTherapistsWhatsApp() {
-    const phoneNumber = "5511996994914";
+    const phoneNumber = "5511911829860";
     const message = "Olá! Gostaria de mais informações sobre as terapeutas.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -128,5 +128,6 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
 
 
